@@ -14,11 +14,33 @@ Through coordinate-based control and serial communication, the robot can both mo
 
 ## System Architecture
 [User Input / AI]
+
 ↓
+
 [Python Controller (with Stockfish)]
+
 ↓ (Serial Communication)
+
 [Arduino Controller]
+
 ↓
+
 [WLKATA Mirobot (Robotic Arm)]
 
 ## Project Structure
+ChessRobot.py
+
+## How to Run
+
+### 1. Upload Arduino Code
+- Install the Arduino IDE: [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software)  
+- Open `arduino/robot_arm.ino`  
+- Select the correct port and upload to your Arduino board
+
+### 2. Run Python Controller
+- Install Python 3.x
+- Install required packages:
+  ```bash
+  pip install pyserial stockfish
+
+  python ChessRobot.py
